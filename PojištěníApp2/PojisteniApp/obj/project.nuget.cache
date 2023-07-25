@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KiST6XsaHP4erDZKcB2vn9fMEtaDVmUtGFihPN6XJkUQPf2y2GOgnanxbElFwD4lWb0HdqDE//wxE5ED7/KIRg==",
+  "dgSpecHash": "MQ6Ua2RR57+T6AVhWkOFZ58QuCbGQcRxm8FOMBILu7sMn/nvC5pc9G1yflDE7wfpZyIm6089xfBERUlJGx3brg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jirik\\OneDrive\\Plocha\\Projekt\\PojištěníApp2\\PojisteniApp\\PojisteniApp.csproj",
+  "projectFilePath": "C:\\Users\\jirik\\OneDrive\\Plocha\\ItNetworkProject\\PojištěníApp2\\PojisteniApp\\PojisteniApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jirik\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\jirik\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

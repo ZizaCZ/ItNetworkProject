@@ -11194,11 +11194,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jirik\\OneDrive\\Plocha\\Projekt\\PojištěníApp2\\PojisteniApp\\PojisteniApp.csproj",
+      "projectUniqueName": "C:\\Users\\jirik\\OneDrive\\Plocha\\ItNetworkProject\\PojištěníApp2\\PojisteniApp\\PojisteniApp.csproj",
       "projectName": "PojisteniApp",
-      "projectPath": "C:\\Users\\jirik\\OneDrive\\Plocha\\Projekt\\PojištěníApp2\\PojisteniApp\\PojisteniApp.csproj",
+      "projectPath": "C:\\Users\\jirik\\OneDrive\\Plocha\\ItNetworkProject\\PojištěníApp2\\PojisteniApp\\PojisteniApp.csproj",
       "packagesPath": "C:\\Users\\jirik\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jirik\\OneDrive\\Plocha\\Projekt\\PojištěníApp2\\PojisteniApp\\obj\\",
+      "outputPath": "C:\\Users\\jirik\\OneDrive\\Plocha\\ItNetworkProject\\PojištěníApp2\\PojisteniApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
