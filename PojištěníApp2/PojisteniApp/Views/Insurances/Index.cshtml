@@ -1,0 +1,47 @@
+﻿@model IEnumerable<PojisteniApp.Models.Insurance>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3>Seznam Pojištění</h3>
+<br />
+
+<table class="table table-bordered table-hover border-2 table-responsive-sm">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.customer.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model=>model.Option)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                    <a asp-action="Details" asp-route-id="@item.Id"> @item?.customer?.Name  @item?.customer?.SurName</a>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Option)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                    @if (User.IsInRole("admin"))
+                    {
+                        <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                        <a class ="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    }
+                </td>
+        </tr>
+}
+    </tbody>
+</table>

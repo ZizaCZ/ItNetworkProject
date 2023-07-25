@@ -1,0 +1,65 @@
+﻿@model PojisteniApp.Models.Customer
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h5><strong>Editování pojištěnce @Model.Name @Model.SurName</strong></h5>
+<hr />
+<form asp-action="Edit">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group ">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" placeholder="@Model.Name" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                    <br />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" placeholder="@Model.Email" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                    <br />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Address" class="control-label"></label>
+                    <input asp-for="Address" class="form-control" placeholder="@Model.Address" />
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                    <br />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="SurName" class="control-label"></label>
+                    <input asp-for="SurName" class="form-control" placeholder="Novák" />
+                    <span asp-validation-for="SurName" class="text-danger"></span>
+                    <br />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Phone" class="control-label"></label>
+                    <input asp-for="Phone" class="form-control" placeholder="831 293 982" />
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                    <br />
+                </div>
+                <div class="form-group">
+                    <label asp-for="City" class="control-label"></label>
+                    <input asp-for="City" class="form-control" placeholder="Praha 1" />
+                    <span asp-validation-for="City" class="text-danger"></span>
+                    <br />
+                </div>
+                <div class="form-group">
+                    <label asp-for="PSC" class="control-label"></label>
+                    <input asp-for="PSC" class="form-control" placeholder="100 00" />
+                    <span asp-validation-for="PSC" class="text-danger"></span>
+                    <br />
+                </div>
+            </div>
+            <div class="form-group d-flex justify-content-center">
+                <input type="submit" value="Uložit" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+</form>
+

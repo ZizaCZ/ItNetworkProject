@@ -1,0 +1,41 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+.detailemail {
+    margin-left: 5em;
+    margin-top: 2em;
+}
+
+.detailname {
+    margin-left: 3em;
+    margin-top: 2em;
+}
+
+.imgtop {
+    margin-top: 2em;
+}
+.buttop{
+    margin-top:1em;
+}
+.detailinsur {
+    margin-left: 5em;
+    margin-top: 2em;
+}
+.mgl {
+    margin-left: 2em;
+}

@@ -1,0 +1,44 @@
+﻿@model IEnumerable<PojisteniApp.Models.Customer>
+
+@{
+    ViewData["Title"] = "Pojištěnci";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<p class="text-sm-center">
+    <a class="btn btn-primary" asp-action="Create"> Nový pojištěnec </a>
+</p>
+<table class="table table-bordered table-hover border-2 table-responsive-sm">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                Bydliště
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.Id">@item.Name @item.SurName</a>
+                </td>
+                <td>
+                    @item.Address, @item.City
+                </td>
+                <td>
+                    @if (User.IsInRole("admin"))
+                    {
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Odstranit</a>
+                        <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Editovat</a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,105 @@
+﻿@model PojisteniApp.Models.Insurance
+
+@{
+    ViewData["Title"] = "Details";
+}
+<div>
+    <div class="d-flex justify-content-center">
+         <h2>
+            @Html.DisplayFor(model => model.Option)
+         </h2>
+    </div>
+    <hr />
+    <div class="d-flex justify-content-around">
+        <div class="justify-content-sm-center detailinsur">
+            <p>
+                <strong>Zákazník</strong>:
+                <span class="mgl">
+                    <a asp-action="Details" asp-controller="Customers" asp-route-id="@ViewBag.CustomerId">@Html.DisplayFor(model => model.customer.Name) @Html.DisplayFor(model => model.customer.SurName)</a>
+                </span>
+            </p>
+            <p>
+                <strong>@Html.DisplayNameFor(model => model.Subject)</strong>:
+                <span class="mgl">@Html.DisplayFor(model => model.Subject)</span>
+                </p>
+            <p>
+                <strong>@Html.DisplayNameFor(model => model.ValidUntil)</strong>:
+                <span class="mgl">@Html.DisplayFor(model => model.ValidUntil)</span>
+                </p>
+        </div>
+        <div class="justify-content-sm-end detailinsur">
+            <p>
+                <strong>@Html.DisplayNameFor(model => model.Amount)</strong>:
+                <span class="mgl">@Html.DisplayFor(model => model.Amount)</span>
+            </p>
+            <p>
+                <strong>@Html.DisplayNameFor(model => model.ValidFrom)</strong>:
+                <span class="mgl">@Html.DisplayFor(model => model.ValidFrom)</span>
+            </p>
+        </div>
+    </div>
+@*    <div class="container">
+        <div class="row">
+            <div class="col-sm-1">
+                <p>
+                    Zákazník
+                </p>
+            <br />
+            </div>
+            <div class="col-sm-1">
+                <a>@Html.DisplayFor(model => model.customer.Name) @Html.DisplayFor(model => model.customer.SurName)</a>
+                <br />
+            </div>
+            <div class="col-sm-1">
+                <p>
+                    @Html.DisplayNameFor(model => model.Subject)
+                </p>
+                <br />
+            </div>
+            <div class="col-sm-1">
+                <p>
+                    @Html.DisplayFor(model => model.Subject)
+                </p>
+                <br />
+            </div>
+            <div class="col-sm-1">
+                <p>
+                    @Html.DisplayNameFor(model => model.ValidUntil)
+                </p>
+                <br />
+            </div>
+            <div class="col-sm-1">
+                <p>
+                    @Html.DisplayFor(model => model.ValidUntil)
+                </p>
+                <br />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1">
+                <p>
+                    @Html.DisplayNameFor(model => model.Amount)
+                </p>
+                <br />
+            </div>
+            <div class="col-sm-1">
+                <p>
+                    @Html.DisplayFor(model => model.Amount)
+                </p>
+                <br />
+            </div>
+            <div class="col-sm-1">
+                <p>
+                    @Html.DisplayNameFor(model => model.ValidFrom)
+                </p>
+                <br />
+            </div>
+            <div class="col-sm-1">
+                <p>
+                    @Html.DisplayFor(model => model.ValidFrom)
+                </p>
+                <br />
+            </div>
+        </div>
+    </div>*@
+</div>

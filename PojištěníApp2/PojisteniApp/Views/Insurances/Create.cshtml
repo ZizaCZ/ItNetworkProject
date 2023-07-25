@@ -1,0 +1,55 @@
+﻿@model PojisteniApp.Models.Insurance
+
+@{
+    ViewData["Title"] = "Přidat pojištění";
+}
+
+<h5>Přidat pojištění k @ViewBag.Jmeno</h5>
+<hr />
+<form asp-action="Create">
+<input asp-for="CustomerId" type="hidden" value="@ViewBag.CustomerId"/>
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="form-group">
+                    <label asp-for="Option" class="control-label"></label>
+                    <select asp-for="Option" class="form-control" asp-items="ViewBag.Options"></select>
+                    <span asp-validation-for="Option" class="text-danger"></span>
+                    <br />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Amount" class="control-label"></label>
+                    <input asp-for="Amount" class="form-control" placeholder="1000000" />
+                    <span asp-validation-for="Amount" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ValidFrom" class="control-label"></label>
+                    <input asp-for="ValidFrom" class="form-control" placeholder="1.1.2022" />
+                    <span asp-validation-for="ValidFrom" class="text-danger"></span>
+                    </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Subject" class="control-label"></label>
+                    <input asp-for="Subject" class="form-control" placeholder="Byt"/>
+                    <span asp-validation-for="Subject" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ValidUntil" class="control-label"></label>
+                    <input asp-for="ValidUntil" class="form-control" placeholder="31.12.2022"/>
+                    <span asp-validation-for="ValidUntil" class="text-danger"></span>
+                    <br />
+                </div>
+            </div>
+            <div class="form-group d-flex justify-content-center buttop">
+                <input type="submit" value="Uložit" class="btn btn-primary" asp-route-value="@ViewBag.CustomerId" />
+            </div>
+        </div>
+    </div>
+</form>
+
